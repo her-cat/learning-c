@@ -1,2 +1,4 @@
 # learning-c
-学习C语言及数据结构
+学习数据结构及算法
+
+- [顺序栈](https://github.com/her-cat/learning-datastructure-algorithm/blob/master/SeqStack.c)
