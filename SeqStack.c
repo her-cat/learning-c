@@ -90,8 +90,7 @@ void TestSeqStack()
     printf("Push:%d \n", Push(&S, 3));
 
     STACK_ELEMENT_TYPE value;
-    while (IsEmpty(&S) == FALSE) {
-        Pop(&S, &value);
+    while (Pop(&S, &value) == TRUE) {
         printf("Pop:%d \n", value);
     }
 }
