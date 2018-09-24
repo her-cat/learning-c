@@ -64,10 +64,6 @@ int Pop(LinkStack *S, STACK_ELEMENT_TYPE *value)
     }
 
     LinkStackNode *temp = S->top;
-    if (temp == NULL) {
-        // 申请空间失败
-        return FALSE;
-    }
 
     // 移动栈顶指针
     S->top = temp->next;

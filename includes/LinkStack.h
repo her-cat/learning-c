@@ -1,11 +1,13 @@
 #include "Common.h"
 #define STACK_ELEMENT_TYPE int
 
+/* 链栈节点 */
 typedef struct node {
     STACK_ELEMENT_TYPE data;
     struct node *next;
 } LinkStackNode;
 
+/* 链栈结构 */
 typedef struct {
     LinkStackNode *top;
     int length;
