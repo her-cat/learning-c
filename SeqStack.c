@@ -79,6 +79,22 @@ int Pop(SeqStack *S, STACK_ELEMENT_TYPE *value)
 }
 
 /**
+ * 获取栈顶元素
+ * @param S
+ * @return
+ */
+int GetTop(SeqStack *S, STACK_ELEMENT_TYPE *value)
+{
+    if(IsEmpty(S) == TRUE) {
+        return FALSE;
+    }
+
+    *value = S->elem[S->top];
+
+    return TRUE;
+}
+
+/**
  * 测试顺序栈
  */
 void TestSeqStack()
@@ -88,8 +104,9 @@ void TestSeqStack()
     printf("Push:%d \n", Push(&S, 1));
     printf("Push:%d \n", Push(&S, 2));
     printf("Push:%d \n", Push(&S, 3));
-
     STACK_ELEMENT_TYPE value;
+    GetTop(&S, &value);
+    printf("Top:%d \n", value);
     while (Pop(&S, &value) == TRUE) {
         printf("Pop:%d \n", value);
     }

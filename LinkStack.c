@@ -82,6 +82,22 @@ int Pop(LinkStack *S, STACK_ELEMENT_TYPE *value)
 }
 
 /**
+ * 获取栈顶元素
+ * @param S
+ * @return
+ */
+int GetTop(LinkStack *S, STACK_ELEMENT_TYPE *value)
+{
+    if(IsEmpty(S) == TRUE) {
+        return FALSE;
+    }
+
+    *value = S->top->data;
+
+    return TRUE;
+}
+
+/**
  *
  */
 void TestLinkStack()
@@ -92,6 +108,8 @@ void TestLinkStack()
     printf("Push:%d \n", Push(&S, 2));
     printf("Push:%d \n", Push(&S, 3));
     STACK_ELEMENT_TYPE value;
+    GetTop(&S, &value);
+    printf("Top:%d \n", value);
     while (Pop(&S, &value) == TRUE) {
         printf("Pop:%d \n", value);
     }

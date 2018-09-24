@@ -17,4 +17,5 @@ int IsEmpty(SeqStack *S);
 int IsFull(SeqStack *S);
 int Push(SeqStack *S, STACK_ELEMENT_TYPE value);
 int Pop(SeqStack *S, STACK_ELEMENT_TYPE *value);
+int GetTop(SeqStack *S, STACK_ELEMENT_TYPE *value);
 void TestSeqStack();

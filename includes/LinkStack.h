@@ -15,4 +15,5 @@ void InitStack(LinkStack *S);
 int IsEmpty(LinkStack *S);
 int Push(LinkStack *S, STACK_ELEMENT_TYPE value);
 int Pop(LinkStack *S, STACK_ELEMENT_TYPE *value);
+int GetTop(LinkStack *S, STACK_ELEMENT_TYPE *value);
 void TestLinkStack();
