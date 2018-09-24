@@ -94,9 +94,4 @@ void TestSeqStack()
         Pop(&S, &value);
         printf("Pop:%d \n", value);
     }
-
-    printf("Push:%d \n", Push(&S, 4));
-    printf("Push:%d \n", Push(&S, 5));
-    printf("Push:%d \n", Push(&S, 6));
-
 }
