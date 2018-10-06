@@ -26,6 +26,12 @@ int IsEmpty(LinkQueue *Q)
     }
 }
 
+/**
+ * 入队
+ * @param Q
+ * @param value
+ * @return
+ */
 int EnQueue(LinkQueue *Q, QUEUE_ELEMENT_TYPE value)
 {
     QueueNode *node = (QueueNode *)malloc(sizeof(QueueNode));
@@ -50,6 +56,12 @@ int EnQueue(LinkQueue *Q, QUEUE_ELEMENT_TYPE value)
     return TRUE;
 }
 
+/**
+ * 出队
+ * @param Q
+ * @param value
+ * @return
+ */
 int DeQueue(LinkQueue *Q, QUEUE_ELEMENT_TYPE *value)
 {
     if (IsEmpty(Q) == TRUE) {
@@ -67,7 +79,12 @@ int DeQueue(LinkQueue *Q, QUEUE_ELEMENT_TYPE *value)
     return TRUE;
 }
 
-
+/**
+ * 获取队头元素
+ * @param Q
+ * @param value
+ * @return
+ */
 int GetFront(LinkQueue *Q, QUEUE_ELEMENT_TYPE *value)
 {
     if (IsEmpty(Q) == TRUE) {
@@ -79,6 +96,9 @@ int GetFront(LinkQueue *Q, QUEUE_ELEMENT_TYPE *value)
     return TRUE;
 }
 
+/**
+ * 测试链式队列
+ */
 void TestLinkQueue() {
     LinkQueue Q;
     QUEUE_ELEMENT_TYPE value;

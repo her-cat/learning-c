@@ -1,11 +1,20 @@
 #include <stdio.h>
 #include "includes/SeqCQueue.h"
 
+/**
+ * 初始化队列
+ * @param Q
+ */
 void InitQueue(SeqCQueue *Q)
 {
     Q->front = Q->rear = Q->length = 0;
 }
 
+/**
+ * 队列是否为空
+ * @param Q
+ * @return
+ */
 int IsEmpty(SeqCQueue *Q)
 {
     if (Q->length == 0) {
@@ -15,6 +24,11 @@ int IsEmpty(SeqCQueue *Q)
     }
 }
 
+/**
+ * 队列是否已满
+ * @param Q
+ * @return
+ */
 int IsFull(SeqCQueue *Q)
 {
     if (Q->length > 0 && Q->front == Q->rear) {
@@ -24,6 +38,12 @@ int IsFull(SeqCQueue *Q)
     }
 }
 
+/**
+ * 入队
+ * @param Q
+ * @param value
+ * @return
+ */
 int EnQueue(SeqCQueue *Q, QUEUE_ELEMENT_TYPE value)
 {
     if (IsFull(Q) == TRUE) {
@@ -37,6 +57,12 @@ int EnQueue(SeqCQueue *Q, QUEUE_ELEMENT_TYPE value)
     return TRUE;
 }
 
+/**
+ * 出队
+ * @param Q
+ * @param value
+ * @return
+ */
 int DeQueue(SeqCQueue *Q, QUEUE_ELEMENT_TYPE *value)
 {
     if (IsEmpty(Q) == TRUE) {
@@ -50,6 +76,12 @@ int DeQueue(SeqCQueue *Q, QUEUE_ELEMENT_TYPE *value)
     return TRUE;
 }
 
+/**
+ * 获取队头元素
+ * @param Q
+ * @param value
+ * @return
+ */
 int GetFront(SeqCQueue *Q, QUEUE_ELEMENT_TYPE *value)
 {
     if (IsEmpty(Q) == TRUE) {
@@ -61,6 +93,9 @@ int GetFront(SeqCQueue *Q, QUEUE_ELEMENT_TYPE *value)
     return TRUE;
 }
 
+/**
+ * 测试顺序循环队列
+ */
 void TestSeqCQueue()
 {
     SeqCQueue Q;
