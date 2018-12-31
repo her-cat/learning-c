@@ -4,3 +4,4 @@
 - [链栈](https://github.com/her-cat/learning-datastructure-algorithm/blob/master/LinkStack.c)
 - [顺序循环队列](https://github.com/her-cat/learning-datastructure-algorithm/blob/master/SeqCQueue.c)
 - [链式队列](https://github.com/her-cat/learning-datastructure-algorithm/blob/master/LinkQueue.c)
+- [约瑟夫问题](https://github.com/her-cat/learning-datastructure-algorithm/blob/master/JosephusProblem.c)
