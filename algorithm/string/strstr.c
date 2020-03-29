@@ -15,7 +15,6 @@ int strStr(char* haystack, char* needle)
 
         if (j == m) return i;
     }
-    
 }
 
 void main() 

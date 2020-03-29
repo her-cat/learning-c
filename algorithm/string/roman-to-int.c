@@ -55,6 +55,22 @@ int romanToInt(char * s){
     return num;
 }
 
+int romanToInt2(char* s) {
+    int len = strlen(s), num = getValue(s[len-1]);
+
+    for (int i = len-2; i >= 0; i--)
+    {
+        int cur = getValue(s[i]);
+        int right = getValue(s[i+1]);
+        if (cur < right)
+            num -= cur;
+        else
+            num += cur;
+    }
+
+    return num;
+}
+
 void main() {
     printf("%d\r\n", romanToInt("DCXXI"));
 }
