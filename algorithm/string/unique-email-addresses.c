@@ -54,6 +54,7 @@ char * parse(char * email)
 int insert(char * email) 
 {
     int i = 0;
+    email = parse(email);
 
     while (uniqueEmails[i]) {
         if (strcmp(uniqueEmails[i], email) == 0) {
@@ -77,8 +78,7 @@ int numUniqueEmails(char ** emails, int emailsSize)
 
     for (int i = 0; i < emailsSize; i++)
     {
-        char * email = parse(emails[i]);
-        if (insert(email) >= 0) {
+        if (insert(emails[i]) >= 0) {
             len++;
         }
     }
